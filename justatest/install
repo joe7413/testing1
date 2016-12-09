@@ -2,7 +2,6 @@
 cd /
 apt-get purge bind9
 apt-get purge apache2
-
 IP=`curl -4 ifconfig.me`
 echo $IP prod.cloud.rockstargames.com prod.ros.cloud.rockstargames.com > /etc/hosts2
 apt-get update
@@ -13,8 +12,6 @@ echo nameserver 4.2.2.1 >/etc/resolv.conf
 echo nameserver 4.2.2.2 >>/etc/resolv.conf
 echo nameserver 4.2.2.1 >> /etc/resolvconf/resolv.conf.d/head
 echo nameserver 4.2.2.2 >> /etc/resolvconf/resolv.conf.d/head
-
-
 service nginx restart
 service dnsmasq restart
 echo
